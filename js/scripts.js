@@ -6,11 +6,7 @@ function Player(Name, turnScore, totalScore) {
 }
 
 Player.prototype.roll = function () {
-    var dieValue = [1, 2, 3, 4, 5, 6]
-    var dieRanVal = dieValue[Math.floor(Math.random() * dieValue.length)]
-    //    console.log(dieRanVal)
-    //    this.turnScore =dieRanVal
-    //    this.totalScore +=dieRanVal
+    var dieRanVal = (Math.floor(Math.random() * 6)+1)
     console.log(dieRanVal)
     if (dieRanVal === 1) {
         this.turnScore = 0
@@ -18,8 +14,9 @@ Player.prototype.roll = function () {
     } else {
         this.totalScore = this.totalScore + dieRanVal
     }
-
+    
 }
+Player.prototype.hold = function (){}
 
 function Clearfield() {
     $("#player1").val("");
@@ -58,6 +55,9 @@ $(document).ready(function () {
         $(".roll1").click(function (event) {
             event.preventDefault();
             var dieRoll = player1.roll();
+            
+        $(".turn-score").text(player1.turnScore);
+        console.log('displayed')
 
         });
     })
