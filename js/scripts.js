@@ -48,6 +48,7 @@ $(document).ready(function () {
         var player1 = new Player(player1Name, 0, 0);
         var player2 = new Player(player2Name, 0, 0);
     //Display the name of the users
+
         $(".Player1name").text(player1Name);
         $(".Player2name").text(player2Name);
         
