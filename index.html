@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+</head>
+
+<body>
+    <section1>
+        <div class="jumbotron">
+            <h1>PIG DICE</h1>
+        </div>
+    </section1>
+    <section2>
+        <div class="well">
+            <h2>RULES</h2>
+            <h4>Objective</h4>
+            <p>
+                The objective of Pig Dice Game is to score 100 points before the opponent(s) do(es). The Pig game is played with a single six-sided die.
+            </p>
+            <h4>
+                <br /> Gameplay
+            </h4>
+
+
+            <p>
+                In each turn a player rolls a die repeatedly until either a 1 is rolled or player decides to hold and pass on the turn to its opponent.
+            </p>
+            <p>
+                The number player rolls is added to a temporary score. If the player rolls a 1, they lose their temporary score and turn is passed to their opponent.
+            </p>
+            <p>
+                If player gets any other number, they can decide to continue and roll the die.
+            </p>
+            <p>
+                If player decides to hold, then their turn total (temporary score) is added to the overall score.
+            </p>
+            <p>
+                The first player to score 100 points wins the game.
+            </p>
+
+
+        </div>
+    </section2>
+    <section3>
+        <div class="players">
+            <form>
+            <label for="player">Player1:</label> 
+            <input id="player1" type="text">
+            <label for="player2">Player2:</label>
+            <input id="player2" type="text">
+            <button type="submit" id="btn">Play</button>
+        </form>
+        </div>
+    </section3>
+    <section4>
+       <div class="container well">
+           <div class="row">
+           <div class="col-md-6">
+               <h3>Player 1: <span></span></h3>
+               <img src="img/User.png" alt="user logo"><br>
+               <div class="score">
+                  <h6>SCORES</h6>
+                   <p>TurnScore: <span></span> </p>
+                   <p>TotalScore: <span></span> </p>
+               </div>
+               <button type="button" class="roll">Roll</button>
+               <button class="hold" type="button">Hold</button>
+           </div>
+           <div class="col-md-6">
+              <h3>Player 2: <span></span></h3>
+               <img src="img/User2.png" alt="user logo"><br>
+               <div class="score">
+                  <h6>SCORES</h6>
+                   <p>TurnScore: <span></span> </p>
+                   <p>TotalScore: <span></span> </p>
+               </div>
+               <button type="button" class="roll">Roll</button>
+               <button class="hold" type="button">Hold</button>
+           </div>
+       </div> 
+       </div>
+    </section4>
+
+</body>
+</html>
