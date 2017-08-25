@@ -12,11 +12,14 @@ Player.prototype.roll = function () {
         this.turnScore = 0
         alert("Ooops!The other players turn")
     } else {
-        this.totalScore = this.totalScore + dieRanVal
+        this.turnScore = this.turnScore + dieRanVal
     }
-    
+   return dieRanVal 
 }
-Player.prototype.hold = function (){}
+Player.prototype.hold = function (){
+    this.turnScore = 0
+    this.totalScore += this.turnScore
+}
 
 function Clearfield() {
     $("#player1").val("");
@@ -54,9 +57,9 @@ $(document).ready(function () {
         
         $(".roll1").click(function (event) {
             event.preventDefault();
-            var dieRoll = player1.roll();
+            var player1Roll = player1.roll();
             
-        $(".turn-score").text(player1.turnScore);
+        $(".turn-score").html(player1Roll.turnScore);
         console.log('displayed')
 
         });
