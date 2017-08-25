@@ -7,5 +7,30 @@ function Player(Name, turnScore, totalScore){
 
 Player.prototype.roll = function() {
     var dieValue = [1,2,3,4,5,6]
+    var dieRanVal = Math.floor(Math.random() * dievalue.length)
+    
     
 }
+
+
+
+//user Interface
+$(document).ready(function(){
+    $("#rules-hidden").click(function(){
+        $("#rules-hiding").toggle();
+        $("#rules-showing").toggle();
+    })
+    $(".click").click(function(event){
+        
+//        $("#players-hiding").toggle();
+        $("#players-showing").toggle();
+    })
+    $("form").submit(function(event){
+        event.preventDefault();
+        //store userinput
+        var player1Name = $("#player1").val();
+        var player2Name = $("#player2").val();
+        console.log(player1Name)
+        console.log(player2Name)
+    })
+});
