@@ -11,6 +11,7 @@ Player.prototype.roll = function() {
     
     
 }
+//function Clearfield
 
 
 
@@ -32,5 +33,8 @@ $(document).ready(function(){
         var player2Name = $("#player2").val();
         console.log(player1Name)
         console.log(player2Name)
+        //Display the name of the users
+        $(".Player1name").text(player1Name)
+        $(".Player2name").text(player2Name)
     })
 });
