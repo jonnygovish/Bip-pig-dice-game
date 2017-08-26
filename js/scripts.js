@@ -17,7 +17,7 @@ Player.prototype.roll = function () {
     }
     return dieRanVal
 }
-Player.prototype.hold = function () {
+Player.prototype.score= function () {
     this.totalScore += this.turnScore
     this.turnScore = 0
 }
@@ -59,14 +59,20 @@ $(document).ready(function () {
     });
     $(".roll1").click(function (event) {
         event.preventDefault();
-
+       // $("#player2-score").hide();
         var player1Roll = player1.roll();
 
         $(".turn-score").text(player1.turnScore);
         $(".die-roll").text(player1Roll);
-        player1.hold();
-        $(".total-score").text(player1.totalScore);
         console.log(player1.turnScore)
+        
 
     });
+    $(".hold1").click(function(event){
+        event.preventDefault();
+        player1.score();
+        $(".total-score").text(player1.totalScore);
+        $(".die-roll").text("")
+        $(".turn-score").text("");
+    })
 });
