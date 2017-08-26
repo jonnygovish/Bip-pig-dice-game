@@ -10,7 +10,7 @@ Player.prototype.roll = function () {
     //    console.log(dieRanVal)
     if (dieRanVal === 1) {
         this.turnScore = 0
-        alert("Ooops!The other players turn")
+        alert("Ooops! You rolled a 1. It's  " + this.Name +"'s turn")
     } else {
         this.turnScore = this.turnScore + dieRanVal
         //        console.log(this.turnScore)
@@ -69,8 +69,8 @@ $(document).ready(function () {
         var player1Roll = player1.roll();
 
         $(".turn-score").text(player1.turnScore);
-        $(".die-roll").text(player1Roll);
-        console.log(player1.turnScore)
+        $(".die-roll1").text(player1Roll);
+        //console.log(player1.turnScore)
         
 
     });
@@ -80,5 +80,24 @@ $(document).ready(function () {
         $(".total-score").text(player1.totalScore);
         $(".die-roll").text("")
         $(".turn-score").text("");
+    })
+    //player 2 buttons
+    $(".roll2").click(function (event) {
+        event.preventDefault();
+       // $("#player2-score").hide();
+        var player2Roll = player2.roll();
+
+        $(".turn-score2").text(player2.turnScore);
+        $(".die-roll2").text(player2Roll);
+        console.log(player2.turnScore)
+        
+
+    });
+    $(".hold2").click(function(event){
+        event.preventDefault();
+        player2.score();
+        $(".total").text(player2.totalScore);
+        $(".die-roll2").text("")
+        $(".turn-score2").text("");
     })
 });
