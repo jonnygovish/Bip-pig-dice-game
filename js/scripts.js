@@ -20,6 +20,12 @@ Player.prototype.roll = function () {
 Player.prototype.score= function () {
     this.totalScore += this.turnScore
     this.turnScore = 0
+    
+    if(this.totalScore >= 100){
+        alert("GAme Over");
+    }else{
+        alert("your turn is over")
+    }
 }
 
 function Clearfield() {
